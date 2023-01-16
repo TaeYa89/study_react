@@ -19,7 +19,7 @@ function ToDoList() {
 
     // 버튼 클릭을 통한 li 삭제 추가
     // 아직 react에 익숙하지 않아 list와 li 둘 다 삭제하려 했음
-    // toDos만 삭제하면 re-rendering 하여 li도 삭제됨
+    // toDos만 삭제하면 re-rendering 하여 li도 삭제 됨
     const onClick = (index) => {
         setToDos((curToDos) => {
             return curToDos.filter((item, curIndex) => curIndex !== index);
