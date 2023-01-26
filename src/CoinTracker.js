@@ -28,23 +28,17 @@ function CoinTracker() {
             return (selectedCoin = JSON.parse(event.target.value));
         });
     };
-    const onSubmit = (event) => {
-        event.preventDefault();
-        console.log(selectedCoin);
-    };
 
     return (
         <div>
             <h1>The Coins!!! ({loading ? "" : coins.length})</h1>
             {loading ? <strong>Now Loading...</strong> : null}
-            <form onSubmit={onSubmit}>
-                <input
-                    type="number"
-                    placeholder="Please Write Your USD..."
-                    value={price}
-                    onChange={onChange}></input>
-                <button>변환</button>
-            </form>
+            <input
+                type="number"
+                placeholder="Please Write Your USD..."
+                value={price}
+                onChange={onChange}></input>
+            <p />
             <select onChange={onSelect}>
                 <option key={-1}>코인을 선택해주세요</option>
                 {coins.map((coin) => {
