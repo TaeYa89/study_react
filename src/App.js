@@ -1,31 +1,43 @@
-import Button from './Button';
-import styles from './App.module.css';
-import { useState, useEffect } from 'react';
+import Button from "./Button";
+import styles from "./App.module.css";
+import { useState, useEffect } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Home from "./routes/Home";
+import Detail from "./routes/Detail";
 
 function App() {
-    const [toDo, setTodo] = useState('');
-    const onChange = (event) => setTodo(event.target.value);
-    const onSubmit = (event) => {
-        event.preventDefault();
-        if (toDo === '') {
-            return;
-        }
-        setTodo('');
-        console.log(toDo);
-    };
-
     return (
-        <div>
-            <form onSubmit={onSubmit}>
-                <input
-                    value={toDo}
-                    onChange={onChange}
-                    type='text'
-                    placeholder='Write your to do...'></input>
-                <button>Add To Do</button>
-            </form>
-        </div>
+        <Router>
+            <Switch>
+                <Route path="/movie">
+                    <Detail />
+                </Route>
+                <Route path="/">
+                    <Home />
+                </Route>
+            </Switch>
+        </Router>
     );
+    //     event.preventDefault();
+    //     if (toDo === '') {
+    //         return;
+    //     }
+    //     setTodo('');
+    //     console.log(toDo);
+    // };
+    //
+    // return (
+    //     <div>
+    //         <form onSubmit={onSubmit}>
+    //             <input
+    //                 value={toDo}
+    //                 onChange={onChange}
+    //                 type='text'
+    //                 placeholder='Write your to do...'></input>
+    //             <button>Add To Do</button>
+    //         </form>
+    //     </div>
+    // );
 }
 
 export default App;
