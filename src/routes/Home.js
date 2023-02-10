@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import MovieSub from "./components/MovieSub";
-import styles from "../MovieSub.module.css";
+import MovieSub from "./MovieSub";
+import styles from "./MovieSub.module.css";
 
 function Home() {
     const [loading, setLoading] = useState(true);

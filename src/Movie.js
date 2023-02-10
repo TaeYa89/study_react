@@ -1,7 +1,7 @@
 import Button from "./Button";
 import styles from "./App.module.css";
 import { useState, useEffect } from "react";
-import MovieSub from "./routes/components/MovieSub";
+import MovieSub from "./routes/MovieSub";
 
 function Movie() {
     const [loading, setLoading] = useState(true);

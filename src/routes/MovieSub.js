@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import styles from "../../MovieSub.module.css";
+import styles from "./MovieSub.module.css";
 
 function MovieSub({ id, coverImg, title, summary, genres, rating, index }) {
     return (
