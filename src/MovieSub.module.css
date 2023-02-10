@@ -1,0 +1,33 @@
+.Home_board {
+    display: flex;
+}
+
+.Home_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 auto;
+    width: 70%;
+    background: darkslategrey;
+}
+
+.movie_container {
+    border: 1px solid;
+    margin: 50px 0;
+    padding: 20px;
+    text-align: center;
+    height: auto;
+    width: 20%;
+    background: black;
+}
+.movie_container:hover {
+    color: white;
+    cursor: pointer;
+}
+.movie_container a:link,
+a:visited,
+a:hover {
+    color: #ddd;
+    text-decoration: none;
+}

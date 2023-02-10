@@ -30,7 +30,7 @@ function Movie() {
         */
         getMovies();
     }, []);
-    console.log(movies);
+
     return (
         <div>
             {loading ? (

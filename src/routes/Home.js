@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import MovieSub from "./components/MovieSub";
+import styles from "../MovieSub.module.css";
 
 function Home() {
     const [loading, setLoading] = useState(true);
@@ -28,46 +29,50 @@ function Home() {
         */
         getMovies();
     }, []);
-    console.log(movies);
+
     return (
         <div>
             {loading ? (
                 <h1>Loading...</h1>
             ) : (
-                <div>
-                    {movies.map(
-                        (movie, index) => (
-                            <MovieSub
-                                key={movie.id}
-                                coverImg={movie.medium_cover_image}
-                                title={movie.title}
-                                summary={movie.summary}
-                                genres={movie.genres}
-                                index={index}
-                            />
-                        )
-                        // MovieSub.js 새로 만들면서 주석 처리
-                        //(
-                        // <div key={movie.id}>
-                        //     {/* 다 붙어서 구별이 잘 안됨, 구역별로 나누려고 index로 처리 */}
-                        //     {index === 0 ? null : (
-                        //         <div>
-                        //             <hr />
-                        //             <br />
-                        //         </div>
-                        //     )}
-                        //     <img src={movie.medium_cover_image} />
-                        //     <h2>{movie.title}</h2>
-                        //     {movie.aa?.aaa}
-                        //     <p>{movie.summary}</p>
-                        //     <ul>
-                        //         {movie.genres.map((g) => (
-                        //             <li key={g}>{g}</li>
-                        //         ))}
-                        //     </ul>
-                        // </div>
-                        //)
-                    )}
+                <div className={styles.Home_board}>
+                    <div className={styles.Home_container}>
+                        {movies.map(
+                            (movie, index) => (
+                                <MovieSub
+                                    key={movie.id}
+                                    id={movie.id}
+                                    coverImg={movie.medium_cover_image}
+                                    title={movie.title}
+                                    summary={movie.summary}
+                                    genres={movie.genres}
+                                    rating={movie.rating}
+                                    index={index}
+                                />
+                            )
+                            // MovieSub.js 새로 만들면서 주석 처리
+                            //(
+                            // <div key={movie.id}>
+                            //     {/* 다 붙어서 구별이 잘 안됨, 구역별로 나누려고 index로 처리 */}
+                            //     {index === 0 ? null : (
+                            //         <div>
+                            //             <hr />
+                            //             <br />
+                            //         </div>
+                            //     )}
+                            //     <img src={movie.medium_cover_image} />
+                            //     <h2>{movie.title}</h2>
+                            //     {movie.aa?.aaa}
+                            //     <p>{movie.summary}</p>
+                            //     <ul>
+                            //         {movie.genres.map((g) => (
+                            //             <li key={g}>{g}</li>
+                            //         ))}
+                            //     </ul>
+                            // </div>
+                            //)
+                        )}
+                    </div>
                 </div>
             )}
         </div>
