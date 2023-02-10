@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/study_react.git/static/css/main.d9b55acb.css",
+    "main.js": "/study_react.git/static/js/main.be4ad540.js",
+    "index.html": "/study_react.git/index.html",
+    "main.d9b55acb.css.map": "/study_react.git/static/css/main.d9b55acb.css.map",
+    "main.be4ad540.js.map": "/study_react.git/static/js/main.be4ad540.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d9b55acb.css",
+    "static/js/main.be4ad540.js"
+  ]
+}
